@@ -1,0 +1,324 @@
+syntax = "proto3";
+
+option go_package = "github.com/sipki-tech/currency/v1;currencypb";
+
+package sipki.tech.currency.v1;
+
+// Contains currency code.
+enum Code {
+  // For unknown value.
+  // Can't be anyway.
+  CODE_UNSPECIFIED = 0;
+  // UAE dirham.
+  CODE_AED = 1;
+  // Afghan afghani.
+  CODE_AFN = 2;
+  // Albanian lek.
+  CODE_ALL = 3;
+  // Armenian dram.
+  CODE_AMD = 4;
+  // Netherlands Antillean gulden.
+  CODE_ANG = 5;
+  // Angolan kwanza.
+  CODE_AOA = 6;
+  // Argentine peso.
+  CODE_ARS = 7;
+  // Australian dollar.
+  CODE_AUD = 8;
+  // Aruban florin.
+  CODE_AWG = 9;
+  // Azerbaijani manat.
+  CODE_AZN = 10;
+  // Bosnia and Herzegovina konvertibilna marka.
+  CODE_BAM = 11;
+  // Barbadian dollar.
+  CODE_BBD = 12;
+  // Bangladeshi taka.
+  CODE_BDT = 13;
+  // Bulgarian lev.
+  CODE_BGN = 14;
+  // Bahraini dinar.
+  CODE_BHD = 15;
+  // Burundi franc.
+  CODE_BIF = 16;
+  // Bermudian dollar.
+  CODE_BMD = 17;
+  // Brunei dollar.
+  CODE_BND = 18;
+  // Bolivian boliviano.
+  CODE_BOB = 19;
+  // Brazilian real.
+  CODE_BRL = 20;
+  // Bahamian dollar.
+  CODE_BSD = 21;
+  // Bhutanese ngultrum.
+  CODE_BTN = 22;
+  // Botswana pula.
+  CODE_BWP = 23;
+  // Belarusian ruble.
+  CODE_BYR = 24;
+  // Belize dollar.
+  CODE_BZD = 25;
+  // Canadian dollar.
+  CODE_CAD = 26;
+  // Congolese franc.
+  CODE_CDF = 27;
+  // Swiss franc.
+  CODE_CHF = 28;
+  // Chilean peso.
+  CODE_CLP = 29;
+  // Chinese/Yuan renminbi.
+  CODE_CNY = 30;
+  // Colombian peso.
+  CODE_COP = 31;
+  // Costa Rican colon.
+  CODE_CRC = 32;
+  // Cuban peso.
+  CODE_CUC = 33;
+  // Cape Verdean escudo.
+  CODE_CVE = 34;
+  // Czech koruna.
+  CODE_CZK = 35;
+  // Djiboutian franc.
+  CODE_DJF = 36;
+  // Danish krone.
+  CODE_DKK = 37;
+  // Dominican peso.
+  CODE_DOP = 38;
+  // Algerian dinar.
+  CODE_DZD = 39;
+  // Estonian kroon.
+  CODE_EEK = 40;
+  // Egyptian pound.
+  CODE_EGP = 41;
+  // Eritrean nakfa.
+  CODE_ERN = 42;
+  // Ethiopian birr.
+  CODE_ETB = 43;
+  // European Euro.
+  CODE_EUR = 44;
+  // Fijian dollar.
+  CODE_FJD = 45;
+  // Falkland Islands pound.
+  CODE_FKP = 46;
+  // British pound.
+  CODE_GBP = 47;
+  // Georgian lari.
+  CODE_GEL = 48;
+  // Ghanaian cedi.
+  CODE_GHS = 49;
+  // Gibraltar pound.
+  CODE_GIP = 50;
+  // Gambian dalasi.
+  CODE_GMD = 51;
+  // Guinean franc.
+  CODE_GNF = 52;
+  // Central African CFA franc.
+  CODE_GQE = 53;
+  // Guatemalan quetzal.
+  CODE_GTQ = 54;
+  // Guyanese dollar.
+  CODE_GYD = 55;
+  // Hong Kong dollar.
+  CODE_HKD = 56;
+  // Honduran lempira.
+  CODE_HNL = 57;
+  // Croatian kuna.
+  CODE_HRK = 58;
+  // Haitian gourde.
+  CODE_HTG = 59;
+  // Hungarian forint.
+  CODE_HUF = 60;
+  // Indonesian rupiah.
+  CODE_IDR = 61;
+  // Israeli new sheqel.
+  CODE_ILS = 62;
+  // Indian rupee.
+  CODE_INR = 63;
+  // Iraqi dinar.
+  CODE_IQD = 64;
+  // Iranian rial.
+  CODE_IRR = 65;
+  // Icelandic króna.
+  CODE_ISK = 66;
+  // Jamaican dollar.
+  CODE_JMD = 67;
+  // Jordanian dinar.
+  CODE_JOD = 68;
+  // Japanese yen.
+  CODE_JPY = 69;
+  // Kenyan shilling.
+  CODE_KES = 70;
+  // Kyrgyzstani som.
+  CODE_KGS = 71;
+  // Cambodian riel.
+  CODE_KHR = 72;
+  // Comorian franc.
+  CODE_KMF = 73;
+  // North Korean won.
+  CODE_KPW = 74;
+  // South Korean won.
+  CODE_KRW = 75;
+  // Kuwaiti dinar.
+  CODE_KWD = 76;
+  // Cayman Islands dollar.
+  CODE_KYD = 77;
+  // Kazakhstani tenge.
+  CODE_KZT = 78;
+  // Lao kip.
+  CODE_LAK = 79;
+  // Lebanese lira.
+  CODE_LBP = 80;
+  // Sri Lankan rupee.
+  CODE_LKR = 81;
+  // Liberian dollar.
+  CODE_LRD = 82;
+  // Lesotho loti.
+  CODE_LSL = 83;
+  // Lithuanian litas.
+  CODE_LTL = 84;
+  // Latvian lats.
+  CODE_LVL = 85;
+  // Libyan dinar.
+  CODE_LYD = 86;
+  // Moroccan dirham.
+  CODE_MAD = 87;
+  // Moldovan leu.
+  CODE_MDL = 88;
+  // Malagasy ariary.
+  CODE_MGA = 89;
+  // Macedonian denar.
+  CODE_MKD = 90;
+  // Myanma kyat.
+  CODE_MMK = 91;
+  // Mongolian tugrik.
+  CODE_MNT = 92;
+  // Macanese pataca.
+  CODE_MOP = 93;
+  // Mauritanian ouguiya.
+  CODE_MRO = 94;
+  // Mauritian rupee.
+  CODE_MUR = 95;
+  // Maldivian rufiyaa.
+  CODE_MVR = 96;
+  // Malawian kwacha.
+  CODE_MWK = 97;
+  // Mexican peso.
+  CODE_MXN = 98;
+  // Malaysian ringgit.
+  CODE_MYR = 99;
+  // Mozambican metical.
+  CODE_MZM = 100;
+  // Namibian dollar.
+  CODE_NAD = 101;
+  // Nigerian naira.
+  CODE_NGN = 102;
+  // Nicaraguan córdoba.
+  CODE_NIO = 103;
+  // Norwegian krone.
+  CODE_NOK = 104;
+  // Nepalese rupee.
+  CODE_NPR = 105;
+  // New Zealand dollar.
+  CODE_NZD = 106;
+  // Omani rial.
+  CODE_OMR = 107;
+  // Panamanian balboa.
+  CODE_PAB = 108;
+  // Peruvian nuevo sol.
+  CODE_PEN = 109;
+  // Papua New Guinean kina.
+  CODE_PGK = 110;
+  // Philippine peso.
+  CODE_PHP = 111;
+  // Pakistani rupee.
+  CODE_PKR = 112;
+  // Polish zloty.
+  CODE_PLN = 113;
+  // Paraguayan guarani.
+  CODE_PYG = 114;
+  // Qatari riyal.
+  CODE_QAR = 115;
+  // Romanian leu.
+  CODE_RON = 116;
+  // Serbian dinar.
+  CODE_RSD = 117;
+  // Russian ruble.
+  CODE_RUB = 118;
+  // Saudi riyal.
+  CODE_SAR = 119;
+  // Solomon Islands dollar.
+  CODE_SBD = 120;
+  // Seychellois rupee.
+  CODE_SCR = 121;
+  // Sudanese pound.
+  CODE_SDG = 122;
+  // Swedish krona.
+  CODE_SEK = 123;
+  // Singapore dollar.
+  CODE_SGD = 124;
+  // Saint Helena pound.
+  CODE_SHP = 125;
+  // Sierra Leonean leone.
+  CODE_SLL = 126;
+  // Somali shilling.
+  CODE_SOS = 127;
+  // Surinamese dollar.
+  CODE_SRD = 128;
+  // Syrian pound.
+  CODE_SYP = 129;
+  // Swazi lilangeni.
+  CODE_SZL = 130;
+  // Thai baht.
+  CODE_THB = 131;
+  // Tajikistani somoni.
+  CODE_TJS = 132;
+  // Turkmen manat.
+  CODE_TMT = 133;
+  // Tunisian dinar.
+  CODE_TND = 134;
+  // Turkish new lira.
+  CODE_TRY = 135;
+  // Trinidad and Tobago dollar.
+  CODE_TTD = 136;
+  // New Taiwan dollar.
+  CODE_TWD = 137;
+  // Tanzanian shilling.
+  CODE_TZS = 138;
+  // Ukrainian hryvnia.
+  CODE_UAH = 139;
+  // Ugandan shilling.
+  CODE_UGX = 140;
+  // United States dollar.
+  CODE_USD = 141;
+  // Uruguayan peso.
+  CODE_UYU = 142;
+  // Uzbekistani som.
+  CODE_UZS = 143;
+  // Venezuelan bolivar.
+  CODE_VEB = 144;
+  // Vietnamese dong.
+  CODE_VND = 145;
+  // Vanuatu vatu.
+  CODE_VUV = 146;
+  // Samoan tala.
+  CODE_WST = 147;
+  // Central African CFA franc.
+  CODE_XAF = 148;
+  // East Caribbean dollar.
+  CODE_XCD = 149;
+  // Special Drawing Rights.
+  CODE_XDR = 150;
+  // West African CFA franc.
+  CODE_XOF = 151;
+  // CFP franc.
+  CODE_XPF = 152;
+  // Yemeni rial.
+  CODE_YER = 153;
+  // South African rand.
+  CODE_ZAR = 154;
+  // Zambian kwacha.
+  CODE_ZMK = 155;
+  // Zimbabwean dollar.
+  CODE_ZWR = 156;
+}
