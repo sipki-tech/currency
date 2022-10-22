@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-option go_package = "github.com/sipki-tech/currency/v1;currencypb";
+option go_package = "github.com/sipki-tech/currency/currency/v1;currencypb";
 
-package sipki.tech.currency.v1;
+package currency.v1;
 
 // Contains currency code.
 enum Code {
