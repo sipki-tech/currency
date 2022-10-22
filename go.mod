@@ -1,4 +1,4 @@
-module github.com/sipki-tech/types
+module github.com/sipki-tech/currency
 
 go 1.19
 
