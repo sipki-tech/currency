@@ -17,7 +17,7 @@ func Parse(txt string) (Code, error) {
 		}
 
 		c := Code(key)
-		if txt == c.Code() {
+		if txt == c.Display() {
 			return c, nil
 		}
 	}
